@@ -22,10 +22,7 @@ Have a nice day ahead and Happy Coding
 ### Tech
  - [CSS](https://vuejs.org/)
  - [Javascript](https://vuejs.org/)
- - [React](https://vuejs.org/)
  - [Vue](https://vuejs.org/)
- - [React](https://vuejs.org/)
  - [Vanilla JS](https://vuejs.org/)
- 
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=herbnspice)](https://github.com/anuraghazra/github-readme-stats) [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=herbnspice)](https://github.com/anuraghazra/github-readme-stats) 
