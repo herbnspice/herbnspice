@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    @apply bg-gray-100
+}
+
+.card{
+    @apply shadow-xl rounded-3xl bg-white mt-10
+}
+.card .header, .card .content {
+    @apply  p-10
+}
+
+.card .content {
+    @apply rounded-bl-3xl rounded-br-3xl bg-white
+}
+.card .header{
+    @apply rounded-tl-3xl rounded-tr-3xl  bg-green-700 text-white
+}
