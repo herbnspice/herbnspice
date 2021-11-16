@@ -8,6 +8,7 @@
               <router-link router-link to="/resume" active-class="active" > Resume  </router-link>
               <router-link router-link to="/about"  active-class="active" > Portfolio </router-link>
               <router-link router-link to="/about" active-class="active" > Contact </router-link>
+              <router-link router-link to="/about" active-class="active" > Clients </router-link>
             </div>
         </header>
       <router-view />
