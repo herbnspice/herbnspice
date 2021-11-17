@@ -35,7 +35,11 @@
                 <p> example@xample.com</p>
               </div>
             </div>
+            
           </div>
+          <a href="" class="download">
+            <fa-icon :icon="iconDownload"></fa-icon>
+          </a>
         </div>
     </div>
     <div class="card mt-2 rounded-t-2xl">
@@ -45,8 +49,15 @@
             <h3> WHO AM I   </h3>
             <p> Hello! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies. </p>
           </div>
-          <div class="separator"></div>
-          <div class="w-full text-center my-12">
+         
+        </div>
+    </div>
+    
+    <div class="separator"></div>
+
+    <div class="mt-2">
+        <div class="content">
+          <div class="w-full text-center">
              <span> Services </span>
               <h3> WHAT I DO </h3>
               <div class="flex flex-wrap justify-center py-10">
@@ -60,16 +71,17 @@
                   </div>
               </div>
           </div>
-          <div class="w-full text-left">
+          <div class="w-full text-center my-10">
               <span> Clients </span>
               <h3> WHO I WORKED WITH </h3>
               <div>
 
               </div>
           </div>
-          <div class="w-full text-center">
-              <span> What other people say about me </span>
-              <h3> Companies that trusted me </h3>
+          <div class="separator"></div>
+          <div class="w-full text-center my-10">
+              <span> Reviews </span>
+              <h3> WHAT PEOPLE SAY ABOUT ME</h3>
               <div>
               </div>
           </div>
@@ -81,6 +93,7 @@
 // @ is an alias to /src
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faFacebookSquare, faLinkedin, faSkype, faInstagram, faGithub} from '@fortawesome/free-brands-svg-icons'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   name: 'Home',
@@ -93,15 +106,24 @@ export default {
       iconFacebook : faFacebookSquare,
       iconSkype : faSkype,
       iconInstagram: faInstagram,
-      iconGithub : faGithub
+      iconGithub : faGithub,
+      iconDownload: faDownload,
     }
   }
 }
 </script>
 <style scoped>
 .header{
-  @apply bg-green-700 text-white  relative flex-wrap flex align-middle rounded-3xl;
- 
+  @apply bg-green-700
+   text-white
+   relative flex-wrap
+   flex sm:align-middle
+   rounded-3xl 
+   sm:justify-end
+   md:justify-start;
+}
+.download{
+  @apply absolute bottom-5 right-6
 }
 .separator{
   height: 1px;
@@ -111,7 +133,7 @@ export default {
   @apply  mt-5 flex flex-wrap rounded-3xl
 }
 .photo{
-  @apply shadow-2xl h-32 w-32;
+  @apply shadow-2xl h-32 w-32 sm:mx-auto md:mx-0;
   
 }
 .socials{ 
@@ -124,24 +146,28 @@ export default {
   @apply rounded-xl
 }
 .details{
-  @apply flex flex-wrap align-middle justify-start text-left items-center w-9/12 ml-5;
+  @apply flex flex-wrap align-middle justify-start text-left sm:items-center md:items-start md:w-9/12 ml-5  sm:w-full;
 }
 
 .title {
-  @apply flex w-5/12 flex-col
+  @apply flex flex-col sm:w-full sm:justify-center sm:mt-5 sm:items-center md:items-start md:w-5/12
 }
 
 .contact {
-  @apply flex w-6/12 flex-wrap px-2 justify-start align-middle border-l-2 pl-5
+  @apply flex w-6/12 flex-wrap px-2 justify-start align-middle  pl-5 sm:w-full sm:pl-0 sm:mt-5 sm:border-l-0 sm:items-center sm:justify-center md:w-7/12 md:justify-start md:items-start md:border-l-2
 }
+
 .contact div{
-  @apply mx-5
+  @apply mx-5 sm:mx-0 sm:px-5 sm:text-center sm:my-1 md:text-left
+}
+.contact div span{
+  @apply text-gray-200
 }
 .contact p{
   @apply p-0 text-sm font-semibold;
 }
 .contact span{
-  @apply p-0 text-xs uppercase
+  @apply p-0 text-xs uppercase 
 }
 h3, h2, p{
   @apply pt-2;
@@ -163,6 +189,7 @@ h2 span{
 span {
   @apply inline-block text-green-800;
 }
+.s
 ul li span:first-child{
   MIN-width: 120px;
 }
