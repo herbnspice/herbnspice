@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="w-8/12  mx-auto">
-        <header>
+        <header class="invisible">
             <h1> Herbert <span> Saladar </span> </h1>
             <div class="nav">
               <router-link to="/" active-class="active" >Home</router-link>
@@ -49,8 +49,6 @@ header{
     transition: all .15s ease-in-out;
     margin: 0 auto;
   }
-
-
 
 </style>
 

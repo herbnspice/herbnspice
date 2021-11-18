@@ -61,28 +61,68 @@
              <span> Services </span>
               <h3> WHAT I DO </h3>
               <div class="flex flex-wrap justify-center py-10">
-                  <div class=" w-5/12  px-5 py-10 m-5 rounded-2xl bg-gradient-to-tr from-gray-100 to-white shadow-md">
+                  <div class=" w-4/12  px-5 pb-10 m-5 rounded-lg bg-gradient-to-tr from-gray-100 to-white shadow-md">
                     <h4> Web App Developement</h4>
                     <p> Hello! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies. </p>
+                    <button class="py-2 px-5 bg-green-500 text-white rounded-lg mt-5"> Lets Discuss </button>
                   </div>
-                  <div class=" w-5/12 px-5 py-10 m-5 rounded-2xl bg-gradient-to-tr from-gray-100 to-white shadow-md">
+                  <div class=" w-4/12 px-5 m-5  pb-10 rounded-lg bg-gradient-to-tr from-gray-100 to-white shadow-md">
                     <h4> Website Developement</h4>
                     <p> Hello! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies. </p>
+                    <button class="py-2 px-5 bg-green-500 text-white rounded-lg mt-5"> Lets Discuss </button>
                   </div>
               </div>
           </div>
-          <div class="w-full text-center my-10">
+          <div class="w-full text-center my-10 x">
               <span> Clients </span>
               <h3> WHO I WORKED WITH </h3>
-              <div>
-
+              <div class="clients pt-10 bg-green-300 mt-10 rounded-xl">
+                  <div>
+                     <img src="@/assets/images/logo/dish.jpg" alt="">
+                  </div>
+                   <div>
+                     <img src="@/assets/images/logo/han.png" alt="">
+                  </div>
+                     <div>
+                     <img src="@/assets/images/logo/carbid360.svg" alt="">
+                  </div>
+                  <div>
+                     <img src="@/assets/images/logo/manaty.png" alt="">
+                  </div>
+                   <div>
+                     <img src="@/assets/images/logo/montalvo.png" alt="">
+                  </div>
+                   <div>
+                     <img src="@/assets/images/logo/mx.png" alt="">
+                  </div>
+                   <div>
+                     <img src="@/assets/images/logo/siena-lending.png" alt="">
+                  </div>
+                   <div>
+                     <img src="@/assets/images/logo/fedsad.png" alt="">
+                  </div>
               </div>
           </div>
           <div class="separator"></div>
           <div class="w-full text-center my-10">
               <span> Reviews </span>
-              <h3> WHAT PEOPLE SAY ABOUT ME</h3>
+              <h3> WHAT SUCCESSFULL PEOPLE SAY ABOUT ME</h3>
               <div>
+                  <div>
+                    <img src="@/assets/images/avatar-montseratt.png" alt="">
+                  </div>
+                  <div>
+                    <img src="@/assets/images/avatar-gustavo.png" alt="">
+                  </div>
+                  <div>
+                    <img src="@/assets/images/avatar-jeremy.png" alt="">
+                  </div>
+                  <div>
+                    <img src="@/assets/images/avatar-gary.png" alt="">
+                  </div>
+                  <div>
+                    <img src="@/assets/images/avatar-nancy.png" alt="">
+                  </div>
               </div>
           </div>
         </div>
@@ -189,8 +229,19 @@ h2 span{
 span {
   @apply inline-block text-green-800;
 }
-.s
+.clients{
+  @apply flex flex-wrap items-center justify-center pt-10
+}
+.clients div{
+   flex: 1 0 21%;
+   @apply flex items-center justify-center p-5
+}
+.clients div img{
+   max-width: 50%;
+  filter: grayscale(1);
+}
 ul li span:first-child{
-  MIN-width: 120px;
+  min-width: 120px;
+  @apply flex-1
 }
 </style>
