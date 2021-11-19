@@ -4,21 +4,21 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
-    @apply bg-gray-100
+    @apply bg-black
 }
 
 .card{
-    @apply shadow-xl rounded-3xl bg-white my-10 
+    @apply shadow-xl rounded-3xl bg-gradient-to-tr from-gray-800  to-gray-900 my-10 
 }
 .card .header, .card .content {
-    @apply  p-10
+    @apply  p-5 text-gray-300
 }
 
 .card .content {
-    @apply rounded-bl-3xl rounded-br-3xl bg-white from-gray-50 to-white  bg-gradient-to-tr
+    @apply rounded-bl-3xl rounded-br-3xl
 }
 .card .header{
-    @apply rounded-tl-3xl rounded-tr-3xl  bg-gradient-to-tr from-green-500 to-green-700 text-white text-center
+    @apply rounded-tl-3xl rounded-tr-3xl  bg-gradient-to-tr from-gray-800  to-gray-900 text-white text-center
 }
 .card .header h2{    
     @apply text-5xl font-extrabold text-center
