@@ -26,3 +26,26 @@ body {
 .card header span{
     @apply text-green-50
 }
+
+
+
+h2{
+    @apply text-4xl font-bold
+}
+h3, h2, p{
+    @apply pt-2;
+}
+h3{
+    @apply text-3xl font-bold m-0 p-0 text-gray-200 relative mt-5;
+}
+h3::before{
+    @apply absolute w-8 h-2 rounded-full  bg-yellow-700 -top-3;
+    content: " "
+}
+h4{
+    @apply text-xl font-bold my-5 p-0;
+
+}
+span {
+    @apply inline-block text-gray-200;
+}
