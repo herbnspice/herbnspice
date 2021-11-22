@@ -8,9 +8,9 @@
     <div class="content flex-wrap">
         <div class="w-full flex">
           <div class="w-6/12 p-2">
-              <h3> <fa-icon :icon="iconBriefcase" class="icon"/>  Experience </h3>
+              <h3 data-aos="fade-down"  data-aos-delay="300"> <fa-icon :icon="iconBriefcase" class="icon"/>  Experience </h3>
               <ul class="timeline">
-              <li v-for="i in experience " :key="i"  data-aos="flip-left">
+              <li v-for="i in experience " :key="i"  data-aos="fade-right" data-aos-delay="300"> 
                   <h4> {{i.title}} </h4>
                   <a href="#"> {{i.year}} | {{i.company}} </a>
                   <span class="float-right "> {{i.type }}  </span>
@@ -21,18 +21,18 @@
           </div>
 
           <div class="w-6/12 p-2">
-              <h3> <fa-icon :icon="iconUserGraduate" class="icon"/> Education </h3>
+              <h3 data-aos="fade-down" data-aos-delay="300"> <fa-icon :icon="iconUserGraduate" class="icon" /> Education </h3>
               <ul class="timeline">
-                <li v-for="i in education " :key="i">
+                <li v-for="i in education " :key="i"   data-aos="fade-right" data-aos-delay="300">  
                     <h4> {{i.course}} </h4>
                     <a href="#"> {{i.school}} </a>
                     <span class="float-right "> {{i.years }}  </span>
                 </li>
               </ul>
               <div class="my-10 h-2"></div>
-              <h3> <fa-icon :icon="iconCertificate" class="icon"/> Certification </h3>
+              <h3  data-aos="fade-down"  data-aos-delay="300">  <fa-icon :icon="iconCertificate" class="icon"/> Certification </h3>
               <ul class="timeline">
-                <li v-for="i in certification " :key="i">
+                <li v-for="i in certification " :key="i"  data-aos="fade-right"  data-aos-delay="300"> 
                     <h4> {{i.title}} </h4>
                     <a href="#"> {{i.year}} </a>
                 </li>
@@ -40,9 +40,9 @@
               
               <div class="my-5 h-2"></div>
 
-              <h3> <fa-icon :icon="iconTalk" class="icon"/>  Talks </h3>
+              <h3  data-aos="fade-down" data-aos-delay="300">  <fa-icon :icon="iconTalk" class="icon"/>  Talks </h3>
               <ul class="timeline">
-                <li v-for="i in talks " :key="i">
+                <li v-for="i in talks " :key="i"  data-aos="fade-right" data-aos-delay="300"> 
                     <h4> {{i.title}} </h4>
                     <strong> {{i.organization }}  </strong>
                     <a href="#" class="block"> {{i.year}} | {{i.type}} </a>
@@ -52,9 +52,9 @@
 
               <div class="my-5 h-2"></div>
 
-              <h3> <fa-icon :icon="iconAward" class="icon"/>  Awards </h3>
+              <h3  data-aos="fade-down">  <fa-icon :icon="iconAward" class="icon"/>  Awards </h3>
               <ul class="timeline">
-                <li v-for="i in award " :key="i">
+                <li v-for="i in award " :key="i"  data-aos="fade-right"> 
                     <h4> {{i.title}} </h4>
                     <strong> {{i.organization }}  </strong>
                     <a href="#" class="block"> {{i.year}} | {{i.type}} </a>
@@ -67,13 +67,13 @@
 
         <div class="w-full flex mt-14 ">
           <div class="w-6/12 p-5">
-            <h3> <fa-icon :icon="iconLaptopCode" class="icon" />Skills </h3>
-            <div class="tags">
+            <h3  data-aos="fade-down">  <fa-icon :icon="iconLaptopCode" class="icon" />Skills </h3>
+            <div class="tags"  data-aos="fade-right"> 
               <span class="tag" v-for="(skill, index) in skills " :key="index"> {{ skill }}</span>
             </div>
           </div>
-          <div class="w-6/12 p-5">
-              <h3> <fa-icon :icon="iconToolBox" class="icon"/> Tools </h3>
+          <div class="w-6/12 p-5"  data-aos="fade-right"> 
+              <h3  data-aos="fade-down">  <fa-icon :icon="iconToolBox" class="icon"/> Tools </h3>
                 <div class="tags">
               <span class="tag" v-for="( tool, i) in tools " :key="i"> {{tool}}</span>
             </div>
