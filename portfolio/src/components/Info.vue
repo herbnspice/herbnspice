@@ -10,10 +10,10 @@
                 <h2 class="name"> <span>Herbert</span> Saladar </h2>
                 <p class="my-2"> Front End Engineer</p>
                 <div class="socials">
-                <a href=""><fa-icon :icon="iconLinkedIn" > </fa-icon></a>
-                <a href=""><fa-icon :icon="iconSkype" > </fa-icon></a>
-                <a href=""><fa-icon :icon="iconInstagram" > </fa-icon></a>
-                <a href=""><fa-icon :icon="iconGithub" > </fa-icon></a>            
+                <a href="https://www.linkedin.com/in/herbertsaladar/" target="_blank"><fa-icon :icon="iconLinkedIn" > </fa-icon></a>
+                <a href="#" target="_blank"><fa-icon :icon="iconSkype" > </fa-icon></a>
+                <a href="https://www.instagram.com/herbert.saladar/" target="_blank"><fa-icon :icon="iconInstagram" > </fa-icon></a>
+                <a href="https://github.com/herbnspice" target="_blank"><fa-icon :icon="iconGithub" > </fa-icon></a>            
                 </div>
                 <p> Philippines </p>
             </div>
@@ -24,7 +24,7 @@
                 </div>
                 <div>
                 <span> Phone  </span>
-                <p> 0949 606 1858</p>
+                <p> +63 949 606 1858</p>
                 </div>
                 <div>
                 <span> Location  </span>

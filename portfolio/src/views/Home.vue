@@ -10,10 +10,9 @@
       <p data-aos="fade-down"  data-aos-delay="300">My Objectives is to help  companies build a platform  using my skills to reach the company goals.</p>
     </div>
   </div>
-  <div class="separator"></div>
   <div class="mt-2">
-    <div class="content">
-      <div class="w-full">
+    <div class="content"  >
+      <div class="w-full " style="display:none">
         <span data-aos="fade-down"  data-aos-delay="300"> Services </span>
           <h3 data-aos="fade-down"  data-aos-delay="300"> WHAT I DO </h3>
           <div class="flex flex-wrap justify-center py-10">
@@ -69,6 +68,13 @@
           <span data-aos="fade-down"  data-aos-delay="300"> Reviews </span>
           <h3 data-aos="fade-down"  data-aos-delay="300"> WHAT SUCCESSFULL PEOPLE SAY ABOUT ME</h3>
           <div class="py-5" data-aos="fade-down"  data-aos-delay="300">
+             <div class="review" data-aos="fade-down"  data-aos-delay="300">
+                  <img src="@/assets/images/avatar-gary.png" alt="">
+                  <strong>Gary Rieschick </strong>
+                  <span>Head of Product Management & Strategy at Nrby </span>
+                  <fa-icon :icon="iconQoute" class="icon"/> 
+                  <p> Herbert was one of the lead development engineers at Carbid 360. His work ethic and quality of work were fantastic. He was always willing to work long days, weekends and just do whatever was needed to help the dev team and company for that matter.  .... </p>
+              </div>
               <div class="review" data-aos="fade-down"  data-aos-delay="300"> 
                 <img src="@/assets/images/avatar-montseratt.png" alt="">
                 <strong>Montserrat Rossas </strong>
@@ -92,13 +98,7 @@
                   I had the chance to work with Herbert on many web projects for more than two years. On top of his great technical skills, Herbert also has the best soft skill any project manager can dream of : reliability. Herbert is a quick learner who says what he does and does what he says. He makes working on complex projects a lot easier, that's why I think he would be a great asset to any team.
                 </p>
               </div>
-              <div class="review" data-aos="fade-down"  data-aos-delay="300">
-                  <img src="@/assets/images/avatar-gary.png" alt="">
-                  <strong>Gary Rieschick </strong>
-                  <span>Head of Product Management & Strategy at Nrby </span>
-                  <fa-icon :icon="iconQoute" class="icon"/> 
-                  <p> Herbert was one of the lead development engineers at Carbid 360. His work ethic and quality of work were fantastic. He was always willing to work long days, weekends and just do whatever was needed to help the dev team and company for that matter.  .... </p>
-              </div>
+             
               <div class="review" data-aos="fade-down"  data-aos-delay="300">
                 <img src="@/assets/images/avatar-nancy.png" alt="">
                   <strong>Nancy Avila </strong>
@@ -116,13 +116,13 @@
               </div>
                 <div class="review" data-aos="fade-down"  data-aos-delay="300">
                 <img src="@/assets/images/avatar-chris.png" alt="">
-                  <strong>Daryl Anthony Jimenea </strong>
-                  <span>UI/UIX  Designer</span>
+                  <strong>Christian Francis Callero </strong>
+                  <span>Remove Android Developer</span>
                   <fa-icon :icon="iconQoute" class="icon"/> 
                   <p>Herbert is one of the best colleague I had worked with. Outstanding team work and work ethics. He will definitely make the job done every time.</p>
               </div>
           </div>
-          <a href="" class="tag mx-auto block w-5/12 text-center"> See More </a>
+          <a href="https://www.linkedin.com/in/herbertsaladar/"  target="_blank" class="tag mx-auto block w-5/12 text-center"> See More </a>
       </div>
       </div>
   </div>

@@ -68,11 +68,11 @@
         <div class="w-full flex mt-14 ">
           <div class="w-6/12 p-5">
             <h3  data-aos="fade-down">  <fa-icon :icon="iconLaptopCode" class="icon" />Skills </h3>
-            <div class="tags"  data-aos="fade-right"> 
+            <div class="tags"  data-aos="fade-down"> 
               <span class="tag" v-for="(skill, index) in skills " :key="index"> {{ skill }}</span>
             </div>
           </div>
-          <div class="w-6/12 p-5"  data-aos="fade-right"> 
+          <div class="w-6/12 p-5"  data-aos="fade-down"> 
               <h3  data-aos="fade-down">  <fa-icon :icon="iconToolBox" class="icon"/> Tools </h3>
                 <div class="tags">
               <span class="tag" v-for="( tool, i) in tools " :key="i"> {{tool}}</span>
@@ -215,7 +215,7 @@ export default {
     ])
 
     const skills = ref([
-      'VueJS', 'Vue CLI', 'Vuex', 'Vue Router', 'Buefy' , 'Vanilla', 'Javascript', 'Polymer', 'NodeJS', 'Tailwind', 'Bootstrap', 'HTML', 'CSS', 'SCSS', 'PHP', 'jQuery', 'GIT', 'Wordpress', 'Webpack', 'Laravel'
+      'Vue 3.x', 'Vue 2.x', 'Vue CLI', 'Vuex', 'Vue Router', 'Buefy' ,  'ES6', 'Vanilla', 'Javascript',  'Ramda', 'Polymer', 'NodeJS', 'Tailwind', 'Bootstrap', 'HTML5', 'CSS3', 'SCSS', 'PHP', 'jQuery', 'GIT', 'Wordpress', 'Webpack', 'Laravel', 'RestAPI'
     ])
     const tools = ref([
       'GIT', 'Github Desktop', 'Vue Devtools', 'VSCode', 'Wave', 'Analytics', 'AWS', 'Restful', 'Adobe Suites', 'Photoshop', 'XD', 'Slack', 'JIRA', 'MS Teams', 'Skype', 'Noun Project', 'Lightbox'
@@ -320,16 +320,13 @@ ul.timeline li strong{
 }
 ul.timeline li p{
   @apply mt-2 p-2 pb-5
- 
 }
 
 .tags{
   @apply flex flex-wrap;
 }
 .tag{
-  @apply bg-yellow-800 text-gray-100 py-2 px-3 mr-2 rounded-full shadow-2xl my-1;  
+  @apply bg-yellow-800 text-gray-100 py-2 px-2 mr-2 rounded-full shadow-2xl my-1;  
 }
-
-
 
 </style>

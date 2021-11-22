@@ -4,9 +4,8 @@
         <div class="links" :class="{'links-show': show == true }">
             <router-link to="/" active-class="active" >Home</router-link>
             <router-link router-link to="/resume" active-class="active" > Resume  </router-link>
-            <router-link router-link to="/about"  active-class="active" > Portfolio </router-link>
-            <router-link router-link to="/about" active-class="active" > Contact </router-link>
-            <router-link router-link to="/about" active-class="active" > Clients </router-link>
+            <router-link router-link to="/portfolio"  active-class="active" > Portfolio </router-link>
+            <router-link router-link to="/contact" active-class="active" > Contact </router-link>
         </div>
         <button @click.prevent="show = !show"> 
             <fa-icon :icon="iconElipsis" />
