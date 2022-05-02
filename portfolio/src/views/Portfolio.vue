@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="content">
-            <div class="w-full text-white">
+            <div class="w-full ">
                 <h2> Portfolio </h2>
             </div>
          </div>
@@ -96,6 +96,6 @@ ul.portfolio li .hover{
     z-index: 1
 }
 .tag{
-  @apply bg-yellow-800 text-gray-100 py-2 px-3 mr-2 rounded-full shadow-2xl my-1 text-center inline-block text-xs;   
+  @apply bg-green-800 text-gray-100 py-2 px-3 mr-2 rounded-full shadow-2xl my-1 text-center inline-block text-xs;   
 }
 </style>

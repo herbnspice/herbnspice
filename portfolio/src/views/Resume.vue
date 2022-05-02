@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="content">
-      <div class="w-full text-white">
+      <div class="w-full ">
         <h2> Resume </h2>
       </div>
     </div>
     <div class="content flex-wrap">
         <div class="w-full flex">
           <div class="w-6/12 p-2">
-              <h3 data-aos="fade-down"  data-aos-delay="300"> <fa-icon :icon="iconBriefcase" class="icon"/>  Experience </h3>
+              <h3 data-aos="fade-left"  data-aos-delay="300"> <fa-icon :icon="iconBriefcase" class="icon"/>  Experience </h3>
               <ul class="timeline">
-              <li v-for="i in experience " :key="i"  data-aos="fade-right" data-aos-delay="300"> 
+              <li v-for="i in experience " :key="i"  data-aos="fade-right" data-aos-delay="1000"> 
                   <h4> {{i.title}} </h4>
                   <a href="#"> {{i.year}} | {{i.company}} </a>
                   <span class="float-right "> {{i.type }}  </span>
@@ -21,18 +21,18 @@
           </div>
 
           <div class="w-6/12 p-2">
-              <h3 data-aos="fade-down" data-aos-delay="300"> <fa-icon :icon="iconUserGraduate" class="icon" /> Education </h3>
+              <h3 data-aos="fade-left" data-aos-delay="300"> <fa-icon :icon="iconUserGraduate" class="icon" /> Education </h3>
               <ul class="timeline">
-                <li v-for="i in education " :key="i"   data-aos="fade-right" data-aos-delay="300">  
+                <li v-for="i in education " :key="i"   data-aos="fade-right" data-aos-delay="1000">  
                     <h4> {{i.course}} </h4>
                     <a href="#"> {{i.school}} </a>
                     <span class="float-right "> {{i.years }}  </span>
                 </li>
               </ul>
               <div class="my-10 h-2"></div>
-              <h3  data-aos="fade-down"  data-aos-delay="300">  <fa-icon :icon="iconCertificate" class="icon"/> Certification </h3>
+              <h3  data-aos="fade-left"  data-aos-delay="300">  <fa-icon :icon="iconCertificate" class="icon"/> Certification </h3>
               <ul class="timeline">
-                <li v-for="i in certification " :key="i"  data-aos="fade-right"  data-aos-delay="300"> 
+                <li v-for="i in certification " :key="i"  data-aos="fade-right"  data-aos-delay="500"> 
                     <h4> {{i.title}} </h4>
                     <a href="#"> {{i.year}} </a>
                 </li>
@@ -40,9 +40,9 @@
               
               <div class="my-5 h-2"></div>
 
-              <h3  data-aos="fade-down" data-aos-delay="300">  <fa-icon :icon="iconTalk" class="icon"/>  Talks </h3>
+              <h3  data-aos="fade-left" data-aos-delay="300">  <fa-icon :icon="iconTalk" class="icon"/>  Talks </h3>
               <ul class="timeline">
-                <li v-for="i in talks " :key="i"  data-aos="fade-right" data-aos-delay="300"> 
+                <li v-for="i in talks " :key="i"  data-aos="fade-right" data-aos-delay="500"> 
                     <h4> {{i.title}} </h4>
                     <strong> {{i.organization }}  </strong>
                     <a href="#" class="block"> {{i.year}} | {{i.type}} </a>
@@ -52,7 +52,7 @@
 
               <div class="my-5 h-2"></div>
 
-              <h3  data-aos="fade-down">  <fa-icon :icon="iconAward" class="icon"/>  Awards </h3>
+              <h3  data-aos="fade-left">  <fa-icon :icon="iconAward" class="icon"/>  Awards </h3>
               <ul class="timeline">
                 <li v-for="i in award " :key="i"  data-aos="fade-right"> 
                     <h4> {{i.title}} </h4>
@@ -69,13 +69,13 @@
           <div class="w-6/12 p-5">
             <h3  data-aos="fade-down">  <fa-icon :icon="iconLaptopCode" class="icon" />Skills </h3>
             <div class="tags"  data-aos="fade-down"> 
-              <span class="tag" v-for="(skill, index) in skills " :key="index"> {{ skill }}</span>
+              <span class="tag" v-for="(skill, i) in skills " :key="i"  data-aos="fade-left" :data-aos-delay="500+(i*50)"> {{ skill }}</span>
             </div>
           </div>
           <div class="w-6/12 p-5"  data-aos="fade-down"> 
               <h3  data-aos="fade-down">  <fa-icon :icon="iconToolBox" class="icon"/> Tools </h3>
                 <div class="tags">
-              <span class="tag" v-for="( tool, i) in tools " :key="i"> {{tool}}</span>
+              <span class="tag" v-for="( tool, i) in tools " :key="i" data-aos="fade-left" :data-aos-delay="500+(i*50)"> {{tool}}</span>
             </div>
           </div>
         </div>
@@ -271,32 +271,32 @@ export default {
  }
 
  .timeline {
-   @apply border-l-4 pl-5 relative m-2 border-yellow-800
+   @apply border-l-4 pl-5 relative m-2 border-green-800
  }
 
  .timeline::before{
-   @apply absolute w-3 h-3 -top-0 -left-2 bg-yellow-800 rounded-full;
+   @apply absolute w-3 h-3 -top-0 -left-2 bg-green-800 rounded-full;
    content: "";
  }
 
   .timeline::after{
-   @apply absolute w-3 h-3 -bottom-0 -left-2 bg-yellow-800 rounded-full;
+   @apply absolute w-3 h-3 -bottom-0 -left-2 bg-green-800 rounded-full;
    content: "";
  }
 
  ul.timeline li {
-   @apply border rounded-lg shadow-sm relative mt-8  border-yellow-800 text-white p-5; 
+   @apply border rounded-lg shadow-sm relative mt-8  border-green-800  p-5; 
  }
 
  ul.timeline li::before{
-   @apply w-4 h-4 -left-8 top-1/2 bg-yellow-700 absolute rounded-full;
+   @apply w-4 h-4 -left-8 top-1/2 bg-green-800 absolute rounded-full;
    content: "";
     top: 0%;
     z-index: 1;
  }
 
  ul.timeline li::after{
-   @apply w-6 h-6 -left-9 top-1/2 bg-yellow-800 absolute rounded-full;
+   @apply w-6 h-6 -left-9 top-1/2 bg-green-800 absolute rounded-full;
    content: "";
   top: -4px;
   z-index: 0;
@@ -307,13 +307,13 @@ span.item{
   @apply pl-3
 }
 ul.timeline li h4{
-  @apply m-0 text-gray-100 p-2 rounded-t-lg;
+  @apply m-0 text-green-800 p-2 rounded-t-lg;
 }
 ul.timeline li a {
-   @apply mt-2 p-2 text-gray-400 text-sm;
+   @apply mt-2 p-2 text-green-700 text-sm;
 }
 ul.timeline li span{
-  @apply text-sm mr-4 text-gray-400  p-2
+  @apply text-sm mr-4 text-green-400  p-2
 }
 ul.timeline li strong{
   @apply text-sm p-2 block
@@ -326,7 +326,7 @@ ul.timeline li p{
   @apply flex flex-wrap;
 }
 .tag{
-  @apply bg-yellow-800 text-gray-100 py-2 px-2 mr-2 rounded-full shadow-2xl my-1;  
+  @apply bg-green-800 text-gray-100 py-2 px-2 mr-2 rounded-full shadow-2xl my-1;  
 }
 
 </style>

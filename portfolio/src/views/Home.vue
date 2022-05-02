@@ -12,22 +12,22 @@
   </div>
   <div class="mt-2">
     <div class="content"  >
-      <div class="w-full " style="display:none">
+      <div class="w-full " >
         <span data-aos="fade-down"  data-aos-delay="300"> Services </span>
           <h3 data-aos="fade-down"  data-aos-delay="300"> WHAT I DO </h3>
           <div class="flex flex-wrap justify-center py-10">
               <div class=" w-6/12 p-5 " data-aos="fade-down"  data-aos-delay="300">
-                <div class=" py-10 px-10 rounded-lg bg-gray-800 text-center">
-                  <h4> Web App Developement</h4>
+                <div class=" py-10 px-10 rounded-lg bg-green-300 text-center">
+                  <h4 class="text-center"> Web App Developement</h4>
                   <p> Hello! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies. </p>
-                  <button class="py-2 px-5 bg-yellow-700 text-white rounded-lg mt-5"> Lets Discuss </button>
+                  <button class="py-2 px-5 bg-green-500 text-white rounded-lg mt-5 hover:bg-gray-400"> Lets Discuss </button>
                 </div>
               </div>
               <div class=" w-6/12  p-5 " data-aos="fade-down"  data-aos-delay="300">
-                <div class=" py-10 px-10 rounded-lg bg-gray-800 text-center">
+                <div class=" py-10 px-10 rounded-lg bg-green-300 text-center">
                   <h4> Website Developement</h4>
                   <p> Hello! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies. </p>
-                  <button class="py-2 px-5 bg-yellow-700 text-white rounded-lg mt-5"> Lets Discuss </button>
+                  <button class="py-2 px-5 bg-green-500 text-white rounded-lg mt-5 hover:bg-gray-400"> Lets Discuss </button>
                 </div>
               </div>
           </div>
@@ -122,11 +122,12 @@
                   <p>Herbert is one of the best colleague I had worked with. Outstanding team work and work ethics. He will definitely make the job done every time.</p>
               </div>
           </div>
-          <a href="https://www.linkedin.com/in/herbertsaladar/"  target="_blank" class="tag mx-auto block w-5/12 text-center"> See More </a>
+          <div class="w-full text-center"> 
+          <a href="https://www.linkedin.com/in/herbertsaladar/"  target="_blank" class="tag mx-auto  "> See More </a>
+          </div>
       </div>
       </div>
   </div>
-  <div class="separator"></div>  
 </div>
 </template>
 <script>
@@ -148,7 +149,7 @@ export default {
 <style scoped>
 .separator{
   height: 5px;
-  @apply from-yellow-700 to-yellow-800 w-8/12 mx-auto rounded-full bg-gradient-to-bl shadow-2xl
+  @apply from-green-500 to-green-500 w-8/12 mx-auto rounded-full bg-gradient-to-bl 
 }
 .content{ 
   @apply  mb-5 flex flex-wrap rounded-3xl
@@ -158,10 +159,10 @@ h3, h2, p{
   @apply pt-2;
 }
 h3{
-  @apply text-3xl font-bold m-0 p-0 text-gray-200 relative mt-5;
+  @apply text-3xl font-bold m-0 p-0  relative mt-5;
 }
 h3::before{
-  @apply absolute w-8 h-2 rounded-full  bg-yellow-700 -top-3;
+  @apply absolute w-8 h-2 rounded-full  bg-green-700 -top-3;
   content: " "
 }
 h4{
@@ -169,20 +170,20 @@ h4{
 
 }
 span {
-  @apply inline-block text-gray-200;
+  @apply inline-block ;
 }
 .clients{
-  @apply flex flex-wrap items-center justify-center pt-10 bg-gray-800
+  @apply flex flex-wrap items-center justify-center pt-10 bg-green-400
 }
 .tag{
-  @apply px-4 bg-yellow-700 rounded-full text-white py-2
+  @apply px-4 bg-green-500 rounded-full text-white py-2 hover:bg-green-300
 }
 .clients div{
    flex: 1 0 21%;
    @apply flex items-center justify-center p-5
 }
 .clients div img{
-   max-width: 60%;
+   max-width: 40%;
 }
 ul li span:first-child{
   min-width: 120px;
@@ -190,7 +191,7 @@ ul li span:first-child{
 }
 
 .review{
-  @apply rounded-3xl bg-gray-800 px-10 py-5 relative mt-14 mb-10
+  @apply rounded-3xl bg-green-400 px-10 py-5 relative mt-14 mb-10
 }
 
 .review img{
@@ -198,17 +199,17 @@ ul li span:first-child{
 }
 
 .review strong, .review span{
-  @apply block text-left pl-28
+  @apply block text-left pl-28 text-green-800
 }
 
 .review strong{
-  @apply font-bold text-2xl text-yellow-500
+  @apply font-bold text-2xl 
 }
-.review p{
-  @apply text-left my-4 px-10
+.review p, .content p, .content h4{
+  @apply text-left my-4 px-10 text-green-700
 }
 .review .icon {
-   @apply float-left mt-5 text-yellow-500
+   @apply float-left mt-5 text-green-800
 }
 
 </style>

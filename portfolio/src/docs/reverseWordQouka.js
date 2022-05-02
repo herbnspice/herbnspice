@@ -29,4 +29,4 @@ export const isReverse = ( word, removeWord ) => {
 
 
 const x = reverseWord('test')
-console.log( x )
+console.log( x ) 

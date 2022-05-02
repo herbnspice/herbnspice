@@ -4,21 +4,21 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
-    @apply bg-black
+    @apply bg-gray-100
 }
 
 .card{
-    @apply shadow-xl rounded-3xl bg-gradient-to-tr from-gray-800  to-gray-900 my-10 
+    @apply shadow-2xl rounded-3xl bg-gradient-to-tr  my-10 
 }
 .card .header, .card .content {
-    @apply  p-5 text-gray-300
+    @apply  p-5 text-gray-400
 }
 
 .card .content {
     @apply rounded-bl-3xl rounded-br-3xl
 }
 .card .header{
-    @apply rounded-tl-3xl rounded-tr-3xl  bg-gradient-to-tr from-gray-800  to-gray-900 text-white text-center
+    @apply rounded-tl-3xl rounded-tr-3xl  bg-gradient-to-tr  text-gray-700 text-center
 }
 .card .header h2{    
     @apply text-5xl font-extrabold text-center
@@ -30,16 +30,16 @@ body {
 
 
 h2{
-    @apply text-3xl font-bold
+    @apply text-3xl font-bold text-gray-800
 }
 h3, h2, p{
     @apply pt-2;
 }
 h3{
-    @apply text-3xl font-bold m-0 p-0 text-gray-200 relative mt-5;
+    @apply text-3xl font-bold m-0 p-0 text-gray-500 relative mt-5;
 }
 h3::before{
-    @apply absolute w-8 h-2 rounded-full  bg-yellow-700 -top-3;
+    @apply absolute w-8 h-2 rounded-full  bg-green-700 -top-3;
     content: " "
 }
 h4{
@@ -47,5 +47,5 @@ h4{
 
 }
 span {
-    @apply inline-block text-gray-200;
-}
+    @apply inline-block text-gray-500;
+} 

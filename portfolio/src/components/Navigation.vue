@@ -1,29 +1,31 @@
 <template>
-<div class="w-full h-20 flex  justify-end absolute right-1">
+<div class="w-full h-20 flex justify-end absolute right-1">
     <div class="navigation mx-3" :class="{'show': show == true }">
         <div class="links" :class="{'links-show': show == true }">
-            <router-link to="/" active-class="active" >Home</router-link>
+            <router-link to="/about" active-class="active" >About</router-link>
             <router-link router-link to="/resume" active-class="active" > Resume  </router-link>
             <router-link router-link to="/portfolio"  active-class="active" > Portfolio </router-link>
             <router-link router-link to="/contact" active-class="active" > Contact </router-link>
         </div>
         <button @click.prevent="show = !show"> 
-            <fa-icon :icon="iconElipsis" />
+            <fa-icon :icon="iconArrowRight" v-if="show"/>
+            <fa-icon :icon="iconArrowLeft" v-if="!show"/>
         </button>
     </div>
 </div>
 </template>
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
+import {  faArrowLeft, faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
 export default {
     components:{
-        'fa-icon' : FontAwesomeIcon
+        'fa-icon' : FontAwesomeIcon,
     },
     data() {
         return { 
-            iconElipsis : faEllipsisV,
+            iconArrowLeft: faArrowLeft,
+            iconArrowRight: faArrowRight,
             show: false
         }
     },
@@ -34,17 +36,17 @@ export default {
 </script>
 <style scoped>
     .navigation{
-        @apply   text-gray-100 font-bold text-lg h-16 w-16 relative bg-yellow-700 rounded-full justify-center flex items-center align-middle ;
+        @apply   text-gray-100 font-bold text-lg h-16 w-16 relative bg-green-700 rounded-full justify-center flex items-center align-middle ;
         transition:  all 0.5s  ease-in-out;
         overflow: hidden;
 
     
     }
     button{
-        @apply h-16 w-16 flex justify-center items-center align-middle bg-yellow-700 rounded-full absolute right-0
+        @apply h-16 w-16 flex justify-center items-center align-middle bg-green-700 rounded-full absolute right-0
     }
     .navigation.show{
-        @apply  w-9/12;
+        @apply  w-7/12;
     }
     .navigation a{
         @apply inline-block px-5 py-2 relative;

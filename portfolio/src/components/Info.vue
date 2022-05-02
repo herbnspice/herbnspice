@@ -1,55 +1,42 @@
 <template>
-<div  class="w-1/3">
-    <div class="card mx-10" >
-        <div class="header">
+<div  class="w-full">
+    <div class=" mx-10" >
+       <slot name="navigation"></slot>
+       <div class="header ">
             <div class="photo">
-            <img src="@/assets/avatar.jpg" alt="" srcset="">
+              <img src="@/assets/avatar.jpg" alt="" srcset="">
             </div>
             <div class="details">
-            <div class="title">
-                <h2 class="name"> <span>Herbert</span> Saladar </h2>
-                <p class="my-2"> Front End Engineer</p>
-                <div class="socials">
-                <a href="https://www.linkedin.com/in/herbertsaladar/" target="_blank"><fa-icon :icon="iconLinkedIn" > </fa-icon></a>
-                <a href="#" target="_blank"><fa-icon :icon="iconSkype" > </fa-icon></a>
-                <a href="https://www.instagram.com/herbert.saladar/" target="_blank"><fa-icon :icon="iconInstagram" > </fa-icon></a>
-                <a href="https://github.com/herbnspice" target="_blank"><fa-icon :icon="iconGithub" > </fa-icon></a>            
-                </div>
-                <p> Philippines </p>
-            </div>
-            <div class="contact">
-                <div>
-                <span> Email </span>
-                <p> hrbrtsldr@gmail.com</p>
-                </div>
-                <div>
-                <span> Phone  </span>
-                <p> +63 949 606 1858</p>
-                </div>
-                <div>
-                <span> Location  </span>
-                <p> Philippines</p>
-                </div>
-                <div>
-                <span> Website  </span>
-                <p> herbertsaladar.com</p>
-                </div>
+              <div class="title">
+                  <h2 class="name"> Herbert Saladar </h2>
+                  <p class="my-2"> Front End Engineer</p>
+                  <div class="socials">
+                    <a href="https://www.linkedin.com/in/herbertsaladar/" target="_blank"><fa-icon :icon="iconLinkedIn" > </fa-icon></a>
+                    <a href="#" target="_blank"><fa-icon :icon="iconSkype" > </fa-icon></a>
+                    <a href="https://www.instagram.com/herbert.saladar/" target="_blank"><fa-icon :icon="iconInstagram" > </fa-icon></a>
+                    <a href="https://github.com/herbnspice" target="_blank"><fa-icon :icon="iconGithub" > </fa-icon></a> 
+                    <a href="tel:+639496061858" target="_blank" title="+63 949 606 1858"><fa-icon :icon="iconPhone" class="text-2xl"> </fa-icon></a>
+                    <a href="mailto:hrbrtsldr@gmail.com" target="_blank" title="hrbrtsldr@gmail.com"><fa-icon :icon="iconEmail" class="text-2xl"> </fa-icon></a>
+                    <a href="tel:+639496061858" target="_blank" title="herbertsaladar.com"><fa-icon :icon="iconLink" class="text-2xl"> </fa-icon></a>
+                  </div>
+                  <p> Philippines </p>
+              </div>
             </div>
             
-            </div>
             <a href="" class="download">
             <button>
                 <fa-icon :icon="iconDownload"></fa-icon>
             </button>
             </a>
         </div>
+        <slot name="view"></slot>
     </div>
 </div>
 </template>
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faFacebookSquare, faLinkedin, faSkype, faInstagram, faGithub, } from '@fortawesome/free-brands-svg-icons'
-import { faDownload, faQuoteLeft, faEllipsisV} from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faQuoteLeft, faEllipsisV, faPhone, faLink, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   name: 'Home',
@@ -65,7 +52,11 @@ export default {
       iconGithub : faGithub,
       iconDownload: faDownload,
       iconQoute : faQuoteLeft,
-      iconElipsis : faEllipsisV
+      iconElipsis : faEllipsisV,
+      iconPhone: faPhone,
+      iconLink: faLink,
+      iconEmail: faEnvelope,
+
     }
   },
   setup() {
@@ -74,22 +65,22 @@ export default {
 }
 </script>
 <style scoped>
-.card .header{
-  @apply bg-green-700
-   relative flex-col
+.header{
+  @apply bg-gray-200
+   relative flex-row
    flex sm:align-middle
    rounded-3xl 
    sm:justify-end
-   md:justify-start
-   pb-16;
-   padding-top: 100px;
+   md:justify-evenly
+   pb-16 shadow-xl;
+  
+   padding-top: 50px;
    margin-top:150px;
 }
 
 .photo{
-  @apply shadow-2xl h-52 w-52 sm:mx-auto md:mx-auto absolute top-0 rounded-full shadow-2xl;
-  left: 20%;
-  top:-22%;
+  @apply h-52 w-52 top-0 rounded-full shadow-lg ;
+
   
 }
 .photo  img{
@@ -104,18 +95,15 @@ export default {
   @apply shadow-2xl  mr-3
 }
 .details{
-  @apply flex flex-col align-middle justify-center text-left sm:items-center md:items-center md:w-full  sm:w-full;
+  @apply flex flex-col align-middle justify-center text-left sm:items-center md:items-center;
 }
 
 .title {
   @apply flex flex-col sm:w-full sm:justify-center sm:mt-5 sm:items-center md:items-center md:w-full
 }
 
-h2 span{
-   @apply bg-gray-800 p-2 rounded-2xl text-yellow-500
-}
 .card .header   h2.name {
-  @apply text-3xl font-extrabold  m-0 p-0 text-left
+  @apply text-3xl font-black  m-0 p-0 text-left
 
 }
 
@@ -142,7 +130,7 @@ h2 span{
   @apply absolute bottom-5 right-6
 }
 .download button{
-  @apply bg-yellow-800 text-white rounded-full p-2 h-10 w-10
+  @apply bg-green-700 text-white rounded-full p-2 h-10 w-10
 }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="content">
-            <div class="w-full text-white">
+            <div class="w-full ">
                 <h2> Contact </h2>
             </div>
         </div>
