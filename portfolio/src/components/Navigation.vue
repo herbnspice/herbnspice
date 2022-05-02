@@ -1,11 +1,12 @@
 <template>
-<div class="w-full h-20 flex justify-end absolute right-1">
+<div class="w-full h-20 flex justify-end absolute -right-7 -top-7">
     <div class="navigation mx-3" :class="{'show': show == true }">
         <div class="links" :class="{'links-show': show == true }">
             <router-link to="/about" active-class="active" >About</router-link>
-            <router-link router-link to="/resume" active-class="active" > Resume  </router-link>
-            <router-link router-link to="/portfolio"  active-class="active" > Portfolio </router-link>
-            <router-link router-link to="/contact" active-class="active" > Contact </router-link>
+             <router-link to="/review" active-class="active" >Reviews </router-link>
+            <router-link router-link to="/resume" active-class="active" > Timeline  </router-link>
+            <router-link router-link to="/portfolio"  active-class="active" > Showcase </router-link>
+              <router-link router-link to="/portfolio"  active-class="active" > Blog </router-link>
         </div>
         <button @click.prevent="show = !show"> 
             <fa-icon :icon="iconArrowRight" v-if="show"/>
@@ -37,16 +38,14 @@ export default {
 <style scoped>
     .navigation{
         @apply   text-gray-100 font-bold text-lg h-16 w-16 relative bg-green-700 rounded-full justify-center flex items-center align-middle ;
-        transition:  all 0.5s  ease-in-out;
+        transition:  all 0.3s  ease-in-out;
         overflow: hidden;
-
-    
     }
     button{
-        @apply h-16 w-16 flex justify-center items-center align-middle bg-green-700 rounded-full absolute right-0
+        @apply h-16 w-16 flex justify-center items-center align-middle bg-green-700 rounded-full absolute right-0 hover:bg-green-400
     }
     .navigation.show{
-        @apply  w-7/12;
+        @apply  w-full;
     }
     .navigation a{
         @apply inline-block px-5 py-2 relative;

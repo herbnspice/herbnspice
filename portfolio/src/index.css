@@ -4,11 +4,11 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
-    @apply bg-gray-100
+    @apply bg-white 
 }
 
 .card{
-    @apply shadow-2xl rounded-3xl bg-gradient-to-tr  my-10 
+    @apply shadow-2xl rounded-lg bg-gradient-to-tr  my-10 
 }
 .card .header, .card .content {
     @apply  p-5 text-gray-400

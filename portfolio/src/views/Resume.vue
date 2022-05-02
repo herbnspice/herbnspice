@@ -2,13 +2,28 @@
   <div>
     <div class="content">
       <div class="w-full ">
-        <h2> Resume </h2>
+        <h2> Experience </h2>
       </div>
     </div>
     <div class="content flex-wrap">
-        <div class="w-full flex">
-          <div class="w-6/12 p-2">
-              <h3 data-aos="fade-left"  data-aos-delay="300"> <fa-icon :icon="iconBriefcase" class="icon"/>  Experience </h3>
+        <div class="w-full ">
+
+           <div class="w-full p-2">
+              <h3 data-aos="fade-left"  data-aos-delay="300"> <fa-icon :icon="iconBriefcase" class="icon"/> Work Experience </h3>
+              <ul class="timeline">
+              <li v-for="i in jobs " :key="i"  data-aos="fade-right" data-aos-delay="1000"> 
+                  <h4> {{i.title}} </h4>
+                  <a href="#"> {{i.year}} | {{i.company}} </a>
+                  <span class="float-right "> {{i.type }}  </span>
+                  <p> {{i.intro }} </p>
+                  <span class="item" v-for="(task, index) in i.tasks" :key="index"> {{task}} </span>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="w-full p-2">
+              <h3 data-aos="fade-left"  data-aos-delay="300"> <fa-icon :icon="iconBriefcase" class="icon"/> Commercial Projects </h3>
               <ul class="timeline">
               <li v-for="i in experience " :key="i"  data-aos="fade-right" data-aos-delay="1000"> 
                   <h4> {{i.title}} </h4>
@@ -20,7 +35,7 @@
             </ul>
           </div>
 
-          <div class="w-6/12 p-2">
+          <div class="w-full p-2">
               <h3 data-aos="fade-left" data-aos-delay="300"> <fa-icon :icon="iconUserGraduate" class="icon" /> Education </h3>
               <ul class="timeline">
                 <li v-for="i in education " :key="i"   data-aos="fade-right" data-aos-delay="1000">  
@@ -64,21 +79,13 @@
               
           </div>
         </div>
-
-        <div class="w-full flex mt-14 ">
-          <div class="w-6/12 p-5">
-            <h3  data-aos="fade-down">  <fa-icon :icon="iconLaptopCode" class="icon" />Skills </h3>
-            <div class="tags"  data-aos="fade-down"> 
-              <span class="tag" v-for="(skill, i) in skills " :key="i"  data-aos="fade-left" :data-aos-delay="500+(i*50)"> {{ skill }}</span>
-            </div>
-          </div>
-          <div class="w-6/12 p-5"  data-aos="fade-down"> 
-              <h3  data-aos="fade-down">  <fa-icon :icon="iconToolBox" class="icon"/> Tools </h3>
-                <div class="tags">
-              <span class="tag" v-for="( tool, i) in tools " :key="i" data-aos="fade-left" :data-aos-delay="500+(i*50)"> {{tool}}</span>
-            </div>
-          </div>
-        </div>
+    <div class="w-full mt-20">
+        <a href="mailto:hrbrtsldr@gmail.com" class="text-center mx-auto block bg-green-500 hover:bg-green-400  w-60 text-white rounded-sm p-5 ">
+           Work with me
+        </a>
+       
+    </div>
+       
       </div>
   </div>
 </template>
@@ -103,9 +110,44 @@ export default {
         }
     },
   setup() {
+     const jobs = ref([
+       { title : ' Front End Engineer Consultant',
+        year: '2016 - 2022',
+        company: 'Consultant',
+        type: 'Self Employed',
+        intro: 'A Fintech leading independent asset-based lender (ABL)  serving lower and  middle-market companies that may have difficulty accessing traditional financing.',
+        tasks: []
+      },
+      { title : 'Front End Engineer',
+        year: '2012 - 2016 ',
+        company: 'Socialdraft NY',
+        type: 'Social Media',
+        intro: 'A Fintech leading independent asset-based lender (ABL)  serving lower and  middle-market companies that may have difficulty accessing traditional financing.',
+        tasks: []
+      },
+      { title : 'IT Instructor',
+        year: '2008 - 2012',
+        company: 'Aklan State University College of Industrial Technology Region VI - Western Visayas, Philippines',
+        type: 'Education',
+        intro: 'As a IT instructor I teach high level Information Technology subjects such as Programming, Web development, Multimedia and design and Capstone Projets. I also represent the University in goverment seminars and trainings. ' ,
+        tasks: []
+      },
+     ])
+
     const experience = ref([
+       { title : 'Senior Front End Engineer ',
+        year: '2022',
+        company: 'Dish Network',
+        type: 'Telecom',
+        intro: 'A Fintech leading independent asset-based lender (ABL)  serving lower and  middle-market companies that may have difficulty accessing traditional financing.',
+        tasks: [
+          '1. I analyze complex data and create Vue componenents',
+          '2. I coordinate with the Backend Developers and Integrate the API',
+          '3. I coordinate with Quality Assurance Engineers for bugs, issues and I am incharge on fixing reported issues.',
+        ]
+      },
       { title : 'Programmer Analyst IV',
-        year: '2021',
+        year: '2021 | 4 Months Consultant',
         company: 'Siena Lending',
         type: 'Fintech',
         intro: 'A Fintech leading independent asset-based lender (ABL)  serving lower and  middle-market companies that may have difficulty accessing traditional financing.',
@@ -214,13 +256,7 @@ export default {
       }
     ])
 
-    const skills = ref([
-      'Vue 3.x', 'Vue 2.x', 'Vue CLI', 'Vuex', 'Vue Router', 'Buefy' ,  'ES6', 'Vanilla', 'Javascript',  'Ramda', 'Polymer', 'NodeJS', 'Tailwind', 'Bootstrap', 'HTML5', 'CSS3', 'SCSS', 'PHP', 'jQuery', 'GIT', 'Wordpress', 'Webpack', 'Laravel', 'RestAPI'
-    ])
-    const tools = ref([
-      'GIT', 'Github Desktop', 'Vue Devtools', 'VSCode', 'Wave', 'Analytics', 'AWS', 'Restful', 'Adobe Suites', 'Photoshop', 'XD', 'Slack', 'JIRA', 'MS Teams', 'Skype', 'Noun Project', 'Lightbox'
 
-    ])
 
     const talks = ref([
       { organization : "iSchools - Commission on Information and Communications Technology (Philippines)", 
@@ -255,7 +291,7 @@ export default {
       }
     ])
 
-    return { experience, certification, education, skills, tools, talks, award}
+    return { experience, certification, education,  talks, award, jobs}
   },
 }
 </script>

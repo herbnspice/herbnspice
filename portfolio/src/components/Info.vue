@@ -1,14 +1,14 @@
 <template>
 <div  class="w-full">
-    <div class=" mx-10" >
-       <slot name="navigation"></slot>
+    <div class=" mx-10 relative" >
+       <slot name="navigation" class="relative "></slot>
        <div class="header ">
             <div class="photo">
               <img src="@/assets/avatar.jpg" alt="" srcset="">
             </div>
             <div class="details">
               <div class="title">
-                  <h2 class="name"> Herbert Saladar </h2>
+                  <h2 class="name"> Hi I'm Herbert </h2>
                   <p class="my-2"> Front End Engineer</p>
                   <div class="socials">
                     <a href="https://www.linkedin.com/in/herbertsaladar/" target="_blank"><fa-icon :icon="iconLinkedIn" > </fa-icon></a>
@@ -66,13 +66,14 @@ export default {
 </script>
 <style scoped>
 .header{
-  @apply bg-gray-200
+  @apply from-gray-100  to-white bg-gradient-to-tr
    relative flex-row
    flex sm:align-middle
-   rounded-3xl 
+   rounded-xl 
    sm:justify-end
    md:justify-evenly
-   pb-16 shadow-xl;
+   pb-16 shadow-xl
+   mb-10;
   
    padding-top: 50px;
    margin-top:150px;
@@ -89,10 +90,10 @@ export default {
 
 
 .socials{ 
-  @apply flex justify-center w-5/12 text-3xl px-2;
+  @apply flex justify-evenly w-full text-3xl px-2;
 }
 .socials a{
-  @apply shadow-2xl  mr-3
+  @apply shadow-2xl  mr-3 text-green-500 hover:text-green-300
 }
 .details{
   @apply flex flex-col align-middle justify-center text-left sm:items-center md:items-center;
@@ -130,7 +131,7 @@ export default {
   @apply absolute bottom-5 right-6
 }
 .download button{
-  @apply bg-green-700 text-white rounded-full p-2 h-10 w-10
+  @apply bg-green-700 text-white rounded-full p-2 h-10 w-10 hover:bg-green-400
 }
 
 </style>
