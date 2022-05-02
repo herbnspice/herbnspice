@@ -6,17 +6,18 @@ module.exports = {
       'body': ['"Quicksand"']
     },
     extend: {},
+    screens: {
+      'xs': {'min': '320px', 'max': '480px'},
+      'sm': {'min': '481px', 'max': '767px'},
+      'md': {'min': '768px', 'max': '1023px'},
+      'lg': {'min': '1024px', 'max': '1279px'},
+      'xl': {'min': '1280px', 'max': '1440px'},
+      '2xl': {'min': '1440px'},
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-  screens: {
-    'xs': {'min': '320px', 'max': '480px'},
-    'sm': {'min': '481px', 'max': '767px'},
-    'md': {'min': '768px', 'max': '1023px'},
-    'lg': {'min': '1024px', 'max': '1279px'},
-    'xl': {'min': '1280px', 'max': '1440px'},
-    '2xl': {'min': '1440px'},
-  },
+ 
 }

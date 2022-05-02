@@ -4,28 +4,28 @@
           <span data-aos="fade-down"  data-aos-delay="300"> Clients </span>
           <h3 data-aos="fade-down"  data-aos-delay="300"> WHO I WORKED WITH </h3>
           <div class="clients pt-10 mt-10 rounded-xl">
-              <div data-aos="fade-down"  data-aos-delay="300">
+              <div data-aos="fade-down"  :data-aos-delay="300+(1*50)">
                 <img src="@/assets/images/logo/siena-lending.png" alt="">
               </div>
-              <div data-aos="fade-down"  data-aos-delay="300">
+              <div data-aos="fade-down"  :data-aos-delay="300+(1*50)">
                 <img src="@/assets/images/logo/vmx.svg" alt="">
               </div>
-              <div data-aos="fade-down"  data-aos-delay="300">
+              <div data-aos="fade-down"  :data-aos-delay="300+(2*50)">
                 <img src="@/assets/images/logo/manaty.png" alt="">
               </div>
-              <div data-aos="fade-down"  data-aos-delay="300">
+              <div data-aos="fade-down"  :data-aos-delay="300+(3*50)">
                 <img src="@/assets/images/logo/dish.png" alt="">
               </div>
-              <div data-aos="fade-down"  data-aos-delay="300">
+              <div data-aos="fade-down"  :data-aos-delay="300+(4*50)">
                 <img src="@/assets/images/logo/han.png" alt="">
               </div>
-                <div data-aos="fade-down"  data-aos-delay="300">
+                <div data-aos="fade-down"  :data-aos-delay="300+(5*50)">
                 <img src="@/assets/images/logo/carbid360.svg" alt="">
               </div>
-              <div data-aos="fade-down"  data-aos-delay="300">
+              <div data-aos="fade-down"  :data-aos-delay="300+(6*50)">
                 <img src="@/assets/images/logo/montalvo.png" alt="">
               </div>
-              <div data-aos="fade-down"  data-aos-delay="300">
+              <div data-aos="fade-down"  :data-aos-delay="300+(7*50)">
                 <img src="@/assets/images/logo/fedsad.png" alt="">
               </div>
           </div>
@@ -97,29 +97,30 @@
 </template>
 <style scoped>
 .clients{
-  @apply flex flex-wrap items-center justify-center pt-10 bg-green-600  shadow-2xl
+  @apply grid-cols-4 grid  gap-4 xs:grid-cols-2
 }
 .clients div{
    flex: 1 0 21%;
-   @apply flex items-center justify-center p-5
+   @apply flex items-center justify-center p-5 bg-green-600 rounded-xl ; 
 }
 .clients div img{
+  @apply xs:max-w-full;
    max-width: 80px;
 
 }
 .review-container{
-  @apply  w-full flex-wrap align-middle items-center justify-center; 
+  @apply  w-full flex-wrap align-middle items-center justify-center 
 }
 .review{
-  @apply rounded-3xl bg-green-600 px-5 mx-2 py-5 relative mt-14 mb-5 w-full
+  @apply rounded-xl bg-green-600 px-5 mx-2 py-5 relative mt-14 mb-5 w-full xs:flex xs:flex-col xs:items-center; 
 }
 
 .review img{
-  @apply absolute -top-10 left-6
+  @apply absolute -top-10 left-6 xs:relative xs:w-24 xs:top-0 xs:left-0
 }
 
 .review strong, .review span{
-  @apply block text-left pl-32 text-white
+  @apply block text-left pl-32 text-white xs:p-0 xs:text-center
 }
 
 .review strong{

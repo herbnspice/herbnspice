@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div class="w-full bg-green-200  h-96"></div>
-    <div class="w-5/12 mx-auto -mt-80 relative">
+    <div class="w-5/12 mx-auto -mt-96 relative xs:w-full sm:w-full">
         <div class="flex flex-wrap">
         <Info data-aos="fade-down"  data-aos-delay="300" >
           <template v-slot:navigation>

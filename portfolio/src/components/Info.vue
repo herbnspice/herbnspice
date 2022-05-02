@@ -56,7 +56,6 @@ export default {
       iconPhone: faPhone,
       iconLink: faLink,
       iconEmail: faEnvelope,
-
     }
   },
   setup() {
@@ -67,25 +66,31 @@ export default {
 <style scoped>
 .header{
   @apply from-gray-100  to-white bg-gradient-to-tr
-   relative flex-row
+   relative flex-col
    flex sm:align-middle
    rounded-xl 
+   items-center
    sm:justify-end
    md:justify-evenly
    pb-16 shadow-xl
-   mb-10;
+   mb-10
+   md:flex-col
+   justify-center
+   ;
+  
   
    padding-top: 50px;
    margin-top:150px;
 }
 
 .photo{
-  @apply h-52 w-52 top-0 rounded-full shadow-lg ;
+  @apply h-28 top-0 rounded-full shadow-lg w-28 md:w-52  md:h-52 ;
 
   
 }
 .photo  img{
-  @apply rounded-full
+  @apply rounded-full w-28 md:max-w-full
+
 }
 
 
@@ -96,11 +101,11 @@ export default {
   @apply shadow-2xl  mr-3 text-green-500 hover:text-green-300
 }
 .details{
-  @apply flex flex-col align-middle justify-center text-left sm:items-center md:items-center;
+  @apply flex flex-col align-middle justify-center text-left sm:items-center md:items-center sm:text-center;
 }
 
 .title {
-  @apply flex flex-col sm:w-full sm:justify-center sm:mt-5 sm:items-center md:items-center md:w-full
+  @apply flex flex-col sm:w-full sm:justify-center sm:mt-5 sm:items-center md:items-center md:w-full xs:justify-center xs:items-center
 }
 
 .card .header   h2.name {
