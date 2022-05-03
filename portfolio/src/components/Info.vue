@@ -66,15 +66,18 @@ export default {
 <style scoped>
 .header{
   @apply from-gray-100  to-white bg-gradient-to-tr
-   relative flex-col
+   relative 
    flex sm:align-middle
    rounded-xl 
    items-center
-   sm:justify-end
-   md:justify-evenly
+   md:justify-center
+   sm:justify-center
+     lg:justify-center
    pb-16 shadow-xl
    mb-10
-   md:flex-col
+   md:flex-row
+   xs:flex-col
+   sm:flex-col
    justify-center
    ;
   
@@ -84,12 +87,12 @@ export default {
 }
 
 .photo{
-  @apply h-28 top-0 rounded-full shadow-lg w-28 md:w-52  md:h-52 ;
+  @apply h-28 top-0 rounded-full  w-28 md:w-64  md:h-64 mr-10;
 
   
 }
 .photo  img{
-  @apply rounded-full w-28 md:max-w-full
+  @apply rounded-full w-28 md:max-w-full shadow-lg xs:h-28 md:w-64  md:h-64
 
 }
 

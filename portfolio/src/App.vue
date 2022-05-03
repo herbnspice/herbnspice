@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div class="w-full bg-green-200  h-96"></div>
-    <div class="w-5/12 mx-auto -mt-96 relative xs:w-full sm:w-full">
+    <div class=" w-145 mx-auto  -mt-80 relative xs:w-full sm:w-full">
         <div class="flex flex-wrap">
         <Info data-aos="fade-down"  data-aos-delay="300" >
           <template v-slot:navigation>
@@ -22,7 +22,7 @@
       </button>
     </div>
     <div class="text-center p-5">
-      &copy; Herbert Saladar <a href="https://creativecommons.org/licenses/by-sa/4.0/"> (CC BY-SA 4.0) </a>
+      <a href="https://github.com/herbnspice/herbnspice/tree/master/portfolio" class="hover:text-green-400"> Designed & Built by Herbert Saladar </a>
     </div>
   </div>
 </template>

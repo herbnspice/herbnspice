@@ -5,7 +5,15 @@ module.exports = {
     fontFamily: {
       'body': ['"Quicksand"']
     },
-    extend: {},
+    extend: {
+      width: {
+        '128' : '32rem',
+        '136' : '36rem',
+        '140' : '40rem',
+        '145' : '45rem',
+
+      }
+    },
     screens: {
       'xs': {'min': '320px', 'max': '480px'},
       'sm': {'min': '481px', 'max': '767px'},
